@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz-Online</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            font-weight: 500;
+        }
+        #wraper{
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function storeid(){
+        var className = document.getElementsByClassName('questions');
+        var classnameCount = className.length;
+        var IdStore = new Array();
+        for(var j = 0; j < classnameCount; j++){
+        IdStore[j] = className[j].id;
+        }
+        console.log(IdStore.length);
+        var value=(function (){
+        var radios = document.getElementsByName('choice');
+        console.log(radios);
+        for(var i = 0; i < radios.length; i++){
+            radios[i].onclick = function(){
+            document.getElementById('choiceLabel').innerText = this.value;
+        }
+    }
+})();
+    </script>
+</head>
+<body>
+    <div id="wraper">
+        <div id="Q1" class="questions">
+            <p>1. HTML is what type of language ?</p>
+            <p>a<input type="radio" id="rb" name="choice" value="0">Scripting Language</p>
+            <p>b<input type="radio" id="rb" name="choice" value="1">Markup Language</p>
+            <p>c<input type="radio" id="rb" name="choice" value="0">Programming Language</p>
+            <p>d<input type="radio" id="rb" name="choice" value="0">Network Protocol</p>
+            <label id="choiceLabel"></label>
+        </div>
+        <div id="choice" class="questions">
+            <p>2. HTML uses</p>
+            <p>a<input type="radio" id="rb" name="choice" value="0">User defined tags</p>
+            <p>b<input type="radio" id="rb" name="choice" value="0">Pre-specified tags</p>
+            <p>c<input type="radio" id="rb" name="choice" value="1">Fixed tags defined by the language</p>
+            <p>d<input type="radio" id="rb" name="choice" value="0">Tags only for linking</p>
+            <label id="choiceLabel"></label>
+        </div>
+        <div id="choice" class="questions">
+            <p>3. The year in which HTML was first proposed _______.</p>
+            <p>a<input type="radio" id="rb" name="choice" value="1">1990</p>
+            <p>b<input type="radio" id="rb" name="choice" value="0">1980</p>
+            <p>c<input type="radio" id="rb" name="choice" value="0">2000</p>
+            <p>d<input type="radio" id="rb" name="choice" value="0">1995</p>
+            <label id="choiceLabel"></label>
+        </div>
+        <div id="choice" class="questions">
+            <p>4. Fundamental HTML Block is known as ___________.</p>
+            <p>a<input type="radio" id="rb" name="choice" value="0">HTML Body</p>
+            <p>b<input type="radio" id="rb" name="choice" value="1">HTML Tag</p>
+            <p>c<input type="radio" id="rb" name="choice" value="0">HTML Attribute</p>
+            <p>d<input type="radio" id="rb" name="choice" value="0">HTML Element</p>
+            <label id="choiceLabel"></label>
+        </div>
+        <div id="choice" class="questions">
+            <p>5. What tag is used to display a picture in a HTML page?</p>
+            <p>a<input type="radio" id="rb" name="choice" value="1">picture</p>
+            <p>b<input type="radio" id="rb" name="choice" value="0">image</p>
+            <p>c<input type="radio" id="rb" name="choice" value="0">img</p>
+            <p>d<input type="radio" id="rb" name="choice" value="0">src</p>
+            <label id="choiceLabel"></label>
+        </div>
+        <div>
+            <input type="button" name="Submit" id="" value="Submit" onclick="storeid()">
+        </div>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        #wraper{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script>
+        var place=0;
+        function changeColor(){
+            var colorList=["red","blue","green","orange"];
+            document.getElementById("wraper").style.backgroundColor=colorList[place];
+            place++;
+            if(place===colorList.length) place=0;
+        }
+    </script>
+    <script>
+        var age=prompt("please enter your age");
+        if(age>=18){
+            document.write("you are an adult");
+        }
+        if(age<18){
+            document.write("you are not adult");
+        }
+    </script>
+</head>
+<body>
+    <div id="wraper" onclick="changeColor()">
+
+    </div>
+</body>
+</html>
+h30713047
